@@ -14,3 +14,12 @@ A second (more elaborate) set of useful points
 - and then talk about how you replicate cluster state so that your desired state engine is also HA
 - and then explain how raft ensures that your replicated cluster is consistent
 - and then switch gears and talk a bit about networking.
+
+### Fundamentals and Learnings
+
+- Regions vs Availability Zones: Regions are easy to understand. They are completely isolated from
+each other and are in different parts of the world. Although unusual, failures do happen. AWS
+therefore provides availability zones that are isolated from each other (they have low latency
+connections). Deploying your application across multiple availability zones makes you ready for
+unexpected outages. So if there is an outage with a particular availability zone your application
+stays online.
