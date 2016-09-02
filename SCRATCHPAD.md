@@ -23,3 +23,7 @@ therefore provides availability zones that are isolated from each other (they ha
 connections). Deploying your application across multiple availability zones makes you ready for
 unexpected outages. So if there is an outage with a particular availability zone your application
 stays online.
+
+### Useful Links
+1. [How to create your first Digital Ocean Droplet](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet-virtual-server)
+2. [How To Install and Use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
