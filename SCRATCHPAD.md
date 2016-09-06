@@ -28,3 +28,4 @@ stays online.
 1. [How to create your first Digital Ocean Droplet](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet-virtual-server)
 2. [How To Install and Use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
 3. [Swarm mode overview](https://docs.docker.com/engine/swarm/), [Swarm tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Swarm key concepts](https://docs.docker.com/engine/swarm/key-concepts/)
+4. https://twitter.com/jpetazzo/status/768469854848290816
