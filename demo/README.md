@@ -1,14 +1,16 @@
 ### Machines
 The demo will run on Digital Ocean droplets. The machine configuration we've chosen for this is
-2 GB Memory / 40 GB Disk / SFO2 - Ubuntu 16.04.1 x64. We have the following machines
-- `manager-sfo1` (SF region)
-- `manager-nyc1` (NYC region)
-- `manager-tor1` (Toronto region)
-- `agent-sfo2` (SF region)
-- `agent-nyc1` (NYC region)
-- `agent-tor1` (Toronto region)
+2 GB Memory / 40 GB Disk - Ubuntu 16.04.1 x64. We have the following machines, all in the same region
+but different availability zones.
+- `manager1` (NYC / AZ1)
+- `manager2` (NYC / AZ2)
+- `manager3` (NYC / AZ3)
+- `agent1`   (NYC / AZ1)
+- `agent2`   (NYC / AZ2)
+- `agent3`   (NYC / AZ3)
 
-The managers will additionally perform the role of Swarm managers, and agents will only be workers. So we have 3 managers and 6 workers in total.
+The managers will additionally perform the role of Swarm managers, and agents will only be workers.
+So we have 3 managers and 6 workers in total.
 
 ### Install Docker
 After creating a fresh machine with the above configuration, running the following set of
@@ -37,18 +39,18 @@ sudo apt-get install -y docker-engine
 ### Set up the Swarm
 
 ```sh
-# on manager-sfo1, start the Swarm (replace the IP address with that of the node)
-docker swarm init --advertise-addr 107.170.244.29
+# on manager1, start the Swarm (replace the IP address with that of the node)
+docker swarm init --advertise-addr 198.211.109.17
 
-# on manager-nyc1 and manager-tor1, join the swarm as managers
+# on manager2 and manager3, join the swarm as managers
 docker swarm join \
     --token SWMTKN-1-324inlc7148abkfroqreghaxhax6ru6dcf6ru6dcf4y33wgj2t-v3i8vpbvplpbvplv3i8vpbvpl \
-    107.170.244.29:2377
+    198.211.109.17:2377
 
-# on agent-sfo2, agent-nyc1, and agent-tor1, join the swarm as workers
+# on agent1, agent2, and agent3, join the swarm as workers
 docker swarm join \
     --token SWMTKN-1-324inlc7148abkfroqreghaxhax6ru6dcf6ru6dcf4y33wgj2t-6wo8fh6suzkplpluouo3emo7s \
-    107.170.244.29:2377
+    198.211.109.17:2377
 
 # we must now have a 6 node cluster with 3 manager nodes ready to use
 # some basic sanity checks on one or more managers
@@ -57,7 +59,8 @@ docker info
 ```
 
 ### Set up a simple nginx service
-On the laptop, create an nginx image from the code present in the `demo` directory. Push that image to the registry as `demo-image:1.0`. Then on `manager-sfo1`, run the following command.
+On the laptop, create an nginx image from the code present in the `demo` directory. Push that image
+to the registry as `demo-image:1.0`. Then on `manager1`, run the following command.
 
 ```sh
 docker service create --name nginxdemo --publish 80:80 --replicas 2 demo-image:1.0`
