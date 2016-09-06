@@ -4,7 +4,7 @@ The demo will run on Digital Ocean droplets. The machine configuration we've cho
 - `manager-sfo1` (SF region)
 - `manager-nyc1` (NYC region)
 - `manager-tor1` (Toronto region)
-- `agent-sfo1` (SF region)
+- `agent-sfo2` (SF region)
 - `agent-nyc1` (NYC region)
 - `agent-tor1` (Toronto region)
 
@@ -34,4 +34,26 @@ apt-cache policy docker-engine
 sudo apt-get install -y docker-engine
 ```
 
-### Setup the Swarm
+### Set up the Swarm
+
+```sh
+# on manager-sfo1, start the Swarm (replace the IP address with that of the node)
+docker swarm init --advertise-addr 107.170.244.29
+
+# on manager-nyc1 and manager-tor1, join the swarm as managers
+docker swarm join \
+    --token SWMTKN-1-324inlc7148abkfroqreghaxhax6ru6dcf6ru6dcf4y33wgj2t-v3i8vpbvplpbvplv3i8vpbvpl \
+    107.170.244.29:2377
+
+# on agent-sfo2, agent-nyc1, and agent-tor1, join the swarm as workers
+docker swarm join \
+    --token SWMTKN-1-324inlc7148abkfroqreghaxhax6ru6dcf6ru6dcf4y33wgj2t-6wo8fh6suzkplpluouo3emo7s \
+    107.170.244.29:2377
+
+# we must now have a 6 node cluster with 3 manager nodes ready to use
+# some basic sanity checks on one or more managers
+docker node ls
+docker info
+```
+
+### Set up a simple nginx service
