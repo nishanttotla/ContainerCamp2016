@@ -59,9 +59,17 @@ docker info
 ```
 
 ### Set up a simple nginx service
-On the laptop, create an nginx image from the code present in the `demo` directory. Push that image
-to the registry as `demo-image:1.0`. Then on `manager1`, run the following command.
+On the laptop, create an nginx image from the code present in the `demo` directory. To build and push
+the image, run
 
 ```sh
-docker service create --name nginxdemo --publish 80:80 --replicas 2 demo-image:1.0`
+docker build -t username/london:tag .
+
+# remember to login using docker login before pushing
+docker push username/london:tag
+```
+On `manager1`, run the following command.
+
+```sh
+docker service create --name nginxdemo --publish 80:80 --replicas 2 username/london:tag`
 ```
