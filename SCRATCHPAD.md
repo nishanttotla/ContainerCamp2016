@@ -23,6 +23,7 @@ therefore provides availability zones that are isolated from each other (they ha
 connections). Deploying your application across multiple availability zones makes you ready for
 unexpected outages. So if there is an outage with a particular availability zone your application
 stays online.
+- To look up Docker logs on Ubuntu 16.04, use `journalctl -t dockerd`, then use 'G' to go to the bottom.
 
 ### Useful Links
 1. [How to create your first Digital Ocean Droplet](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet-virtual-server)
