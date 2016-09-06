@@ -1,6 +1,14 @@
 ### Machines
 The demo will run on Digital Ocean droplets. The machine configuration we've chosen for this is
-2 GB Memory / 40 GB Disk / SFO2 - Ubuntu 16.04.1 x64.
+2 GB Memory / 40 GB Disk / SFO2 - Ubuntu 16.04.1 x64. We have the following machines
+- `manager-sfo1` (SF region)
+- `manager-nyc1` (NYC region)
+- `manager-tor1` (Toronto region)
+- `agent-sfo1` (SF region)
+- `agent-nyc1` (NYC region)
+- `agent-tor1` (Toronto region)
+
+The managers will additionally perform the role of Swarm managers, and agents will only be workers. So we have 3 managers and 6 workers in total.
 
 ### Install Docker
 After creating a fresh machine with the above configuration, running the following set of
@@ -25,3 +33,5 @@ apt-cache policy docker-engine
 # install Docker Engine
 sudo apt-get install -y docker-engine
 ```
+
+### Setup the Swarm
