@@ -57,3 +57,8 @@ docker info
 ```
 
 ### Set up a simple nginx service
+On the laptop, create an nginx image from the code present in the `demo` directory. Push that image to the registry as `demo-image:1.0`. Then on `manager-sfo1`, run the following command.
+
+```sh
+docker service create --name nginxdemo --publish 80:80 --replicas 2 demo-image:1.0`
+```
