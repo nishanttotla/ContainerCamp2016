@@ -30,3 +30,4 @@ stays online.
 2. [How To Install and Use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
 3. [Swarm mode overview](https://docs.docker.com/engine/swarm/), [Swarm tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Swarm key concepts](https://docs.docker.com/engine/swarm/key-concepts/)
 4. https://twitter.com/jpetazzo/status/768469854848290816
+5. [Demystifying Service Discovery under Docker Engine 1.12](http://collabnix.com/archives/1504)

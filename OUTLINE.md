@@ -2,6 +2,7 @@
 
 This is the list (in order) of items to be presented during the talk
 
+- Speaker introduction
 - Starting with 1.12, Docker can run services in addition to containers
   - What is a service?
   - Service spec
