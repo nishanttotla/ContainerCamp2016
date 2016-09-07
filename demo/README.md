@@ -72,4 +72,13 @@ On `manager1`, run the following command.
 
 ```sh
 docker service create --name nginxdemo --publish 80:80 --replicas 2 username/london:tag`
+
+# check running services
+docker service ls
+
+# check all tasks of service
+docker service ps nginxdemo
+
+# check only running tasks
+docker service ps -f "desired-state=running" nginxdemo
 ```
