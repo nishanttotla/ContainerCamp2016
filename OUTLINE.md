@@ -46,6 +46,8 @@ HOW: How does it all work?
 - State replication
   - Managers and workers
   - Managers maintain Raft consensus
+  - Promote/Demote workflow
+  - This is HA by default (no single point of failure)
   - How Raft works (briefly)
   - What data is actually replicated
   - Memory Store
