@@ -25,6 +25,9 @@ unexpected outages. So if there is an outage with a particular availability zone
 stays online.
 - To look up Docker logs on Ubuntu 16.04, use `journalctl -t dockerd`, then use 'G' to go to the bottom.
 
+### SwarmKit information
+-
+
 ### Useful Links
 1. [How to create your first Digital Ocean Droplet](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet-virtual-server)
 2. [How To Install and Use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
