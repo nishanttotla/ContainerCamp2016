@@ -34,3 +34,4 @@ stays online.
 3. [Swarm mode overview](https://docs.docker.com/engine/swarm/), [Swarm tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/), [Swarm key concepts](https://docs.docker.com/engine/swarm/key-concepts/)
 4. https://twitter.com/jpetazzo/status/768469854848290816
 5. [Demystifying Service Discovery under Docker Engine 1.12](http://collabnix.com/archives/1504)
+6. [SwarmKit architecture](http://containertutorials.com/swarmkit/architecture.html)
