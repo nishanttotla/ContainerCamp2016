@@ -32,14 +32,14 @@ WHY: Why care about orchestration?
 
 WHAT: What can Docker (Swarm mode) do for me now?
 
-- Cool features Swarm mode gives you
-  - Secure by default (all comm is TLS encrypted)
-  - Easy networking (built-in DNS server, distributed load balancer, service discovery)
-  - State reconciliation
 - Services, the basic block
   - Starting with 1.12, Docker can run services in addition to containers
   - What is a service?
   - Service spec
+- Cool features Swarm mode gives you
+  - Secure by default (all comm is TLS encrypted)
+  - Easy networking (built-in DNS server, distributed load balancer, service discovery)
+  - State reconciliation
 
 HOW: How does it all work?
 
