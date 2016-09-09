@@ -35,3 +35,4 @@ stays online.
 4. https://twitter.com/jpetazzo/status/768469854848290816
 5. [Demystifying Service Discovery under Docker Engine 1.12](http://collabnix.com/archives/1504)
 6. [SwarmKit architecture](http://containertutorials.com/swarmkit/architecture.html)
+7. [Docker 1.12](https://blog.docker.com/2016/07/docker-built-in-orchestration-ready-for-production-docker-1-12-goes-ga/)
